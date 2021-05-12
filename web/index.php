@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Telefono required>
+                            <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Telefono required">
                             <div class="invalid-feedback">Email es obligatorio</div>
                         </div>
 
