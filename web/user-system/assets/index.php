@@ -25,9 +25,9 @@
                         <form action="#" method="post" class="px-3" id="login-form">
                             <!--email-->
                             <div class="input-group input-group-lg form-group py-2">
-                                <div class="input-group-prepend">
+                                <div class="input-group-prepend small-screen">
                                     <span class="input-group-text rounded-0">
-                                        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> 
+                                        <font size="5em"> <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> </font>
                                     </span>
                                 </div>
                                 <input type="email" name="email" id="email" class="form-control rounded-0" placeholder="E-mail" required>
@@ -35,28 +35,28 @@
                             <!--email End-->
                             <!--password--->
                             <div class="input-group input-group-lg form-group py-2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text rounded-0">
-                                        <i class="fa fa-key fa-lg" aria-hidden="true"></i> 
+                                <div class="input-group-prepend small-screen">
+                                    <span class="input-group-text rounded-0" >
+                                    <font size="5em"><i class="fa fa-key fa-lg" aria-hidden="true"></i> </font>
                                     </span>
                                 </div>
                                 <input type="password" name="password" id="password" class="form-control rounded-0" placeholder="Clave" required>
                             </div>
                             <!--password End--->
                             <!--checkbox--->
-                            <div class="form-group py-2">
+                            <div class="form-group mt-2">
                                 <div class="custom-control custom-checkbox float-start">
                                     <input type="checkbox" name="rem" class="custom-control-input" id="customCheck">
                                     <label for="customCheck" class="custom-control-label">Recordarme</label>
                                 </div>
-                                <div class="forgot float-end py-2">
+                                <div class="forgot float-end">
                                     <a href="#" id="forgot-link">Olvid&#233; mi clave</a>
                                 </div>
                             </div>
                             <!--checkbox end--->
                             <div class="clearfix"></div>
                             <!--submit--->
-                            <div class="form-group d-grid">
+                            <div class="form-group d-grid mt-3">
                               
                                 <input type="submit" value="Acceder" id="login-btn" class="btn btn-primary btn-lg myBtn">
                                 
@@ -71,7 +71,7 @@
                         <p class="text-center fw-bolder text-light lead">
                             aqui va algun texto
                         </p>
-                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" id="register-link">Boton</button>
+                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" id="register-link">Registrarse</button>
                     </div>
                     <!-- tarjeta bienvenida final -->
                 </div>
