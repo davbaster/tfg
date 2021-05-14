@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
-<body>
+<body class="bg-info">
     <div class="container">
         <!-------Login inicio ------>
         <div class="row justify-content-center wrapper" id="login-box">
@@ -56,10 +56,8 @@
                             <!--checkbox end--->
                             <div class="clearfix"></div>
                             <!--submit--->
-                            <div class="form-group d-grid mt-3">
-                              
+                            <div class="form-group d-grid mt-3">      
                                 <input type="submit" value="Acceder" id="login-btn" class="btn btn-primary btn-lg myBtn">
-                                
                             </div>
                             <!--submit end--->
                         </form>
@@ -78,6 +76,81 @@
             </div>
         </div>
         <!---------Login Final --------->
+
+        <!-------Registro inicio ------->
+        <div class="row justify-content-center wrapper" id="register-box">
+            <div class="col-lg-10 my-auto myShadow">
+                <div class="row">
+                    <div class="col-lg-5 d-flex flex-column justify-content-center myColor p-4">
+                        <h1 class="text-center fw-bold text-white">Welcome Back!</h1>
+                        <hr class="my-4 bg-light myHr"/>
+                        <p class="text-center fw-bolder text-light lead">To keep connected with us please login with your personal info</p>
+                        <button class="btn btn-outline-light btn-lg fw-bolder mt-4 align-self-center myLinkBtn" id="login-link">Sign In</button>
+                    </div>
+                    <div class="col-lg-7 bg-white p-4">
+                        <h1 class="text-center fw-bold text-primary">Create Account</h1>
+                        <hr class="my-3"/>
+                        <form action="#" method="post" class="px-3" id="register-form">
+                            <!--full name-->
+                            <div class="input-group input-group-lg form-group py-2">
+                                <div class="input-group-prepend small-screen">
+                                    <span class="input-group-text rounded-0">
+                                        <!-- font size used to make icons bigger -->
+                                        <font size="5em"><i class="fa fa-envelope fa-lg " aria-hidden="true"></i></font>
+                                    </span>
+                                </div>
+                                <input type="text" name="name" id="name" class="form-control rounded-0" placeholder="Full Name" required>
+                            </div>
+                            <!--full name End-->
+                            <!--email-->
+                            <div class="input-group input-group-lg form-group py-2">
+                                <div class="input-group-prepend small-screen">
+                                    <span class="input-group-text rounded-0">
+                                        <!-- font size used to make icons bigger -->
+                                        <font size="5em"><i class="fa fa-envelope fa-lg " aria-hidden="true"></i></font>
+                                    </span>
+                                </div>
+                                <input type="email" name="email" id="reemail" class="form-control rounded-0" placeholder="E-mail" required>
+                            </div>
+                            <!--email End-->
+                            <!--Register password--->
+                            <div class="input-group input-group-lg form-group py-2">
+                                <div class="input-group-prepend small-screen">
+                                    <span class="input-group-text rounded-0" >
+                                    <font size="5em"><i class="fa fa-key fa-lg" aria-hidden="true"></i> </font>
+                                    </span>
+                                </div>
+                                <input type="password" name="password" id="rpassword" class="form-control rounded-0" minlengh="5" placeholder="Clave" required>
+                            </div>
+                            <!--Register password End--->
+                            <!--Verifica password--->
+                            <div class="input-group input-group-lg form-group py-2">
+                                <div class="input-group-prepend small-screen">
+                                    <span class="input-group-text rounded-0" >
+                                        <font size="5em"><i class="fa fa-key fa-lg" aria-hidden="true"></i> </font>
+                                    </span>
+                                </div>
+                                <input type="password" name="cpassword" id="crpassword" class="form-control rounded-0" minlengh="5" placeholder="Reintroduce Clave" required/>
+                            </div>
+                            <!--Verfica password End--->
+                            <!--mensaje password--->
+                            <div class="form-group">
+                                <div id="passError" class="text-danger font-weight-bolder"></div>
+                            </div>
+                            <!--mensaje password final--->
+                            <!--boton registrar--->
+                            <div class="form-group d-grid mt-3">      
+                                <input type="submit" value="Sign Up" id="register-btn" class="btn btn-primary btn-lg myBtn">
+                            </div>        
+                            <!--boton registrar final--->
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!---------Registro Final --------->
+        <!---------forgot password inicio --------->
+        <!---------forgot password final --------->
     </div>
 
         <!-- JavaScript Bundle with Popper -->
