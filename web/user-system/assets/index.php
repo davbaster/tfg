@@ -150,6 +150,43 @@
         </div>
         <!---------Registro Final --------->
         <!---------forgot password inicio --------->
+        <div class="row justify-content-center wrapper" id="forgot-box">
+            <div class="col-lg-10 my-auto myShadow">
+                <div class="row">
+                    <div class="col-lg-7 bg-white p-4">
+                        <h1 class="text-center fw-bold text-primary">Recuperacion de clave</h1>
+                        <hr class="my-3">
+                        <p class="text-center fw-bolder text-primary lead">Para recuperar su clave, ingrese su usuario</p>
+                        <form action="#" method="post" class="px-3" id="forgot-form">
+                            <div id="forgotAlert"></div>
+                            <!--email-->
+                            <div class="input-group input-group-lg form-group py-2">
+                                <div class="input-group-prepend small-screen">
+                                    <span class="input-group-text rounded-0">
+                                        <font size="5em"> <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> </font>
+                                    </span>
+                                </div>
+                                <input type="email" name="email" id="femail" class="form-control rounded-0" placeholder="E-mail" required>
+                            </div>
+                            <!--email End-->
+                            <!-- <div class="clearfix"></div> -->
+                            <!--submit button--->
+                            <div class="form-group d-grid mt-3">      
+                                <input type="submit" value="Reenviar clave" id="forgot-btn" class="btn btn-primary btn-lg myBtn">
+                            </div>
+                            <!--submit button end--->
+                        </form>
+                    </div>
+                    <!-- Tarjeta Bienvenida --> 
+                    <div class="col-lg-5 d-flex flex-column justify-content-center myColor p-4">
+                        <h1 class="text-center fw-bold text-white">Olvide mi clave!</h1>
+                        <hr class="my-3 bg-light myHr">
+                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" id="back-link">Regresar</button>
+                    </div>
+                    <!-- tarjeta bienvenida final -->
+                </div><!-- fin row -->
+            </div>
+        </div>
         <!---------forgot password final --------->
     </div>
 
