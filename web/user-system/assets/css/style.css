@@ -50,6 +50,13 @@ body {
     /* width: 50%; */
     border: 2px solid #fff;
 }
+
+.hide-form {
+    display: none;
+}
+
+
+
 @media (max-width: 768px) {
     .wrapper{
         margin: 2px;

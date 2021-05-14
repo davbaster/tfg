@@ -43,17 +43,18 @@
                                 <input type="password" name="password" id="password" class="form-control rounded-0" placeholder="Clave" required>
                             </div>
                             <!--password End--->
-                            <!--checkbox--->
+                            <!--checkbox and link--->
                             <div class="form-group mt-2">
                                 <div class="custom-control custom-checkbox float-start">
                                     <input type="checkbox" name="rem" class="custom-control-input" id="customCheck">
                                     <label for="customCheck" class="custom-control-label">Recordarme</label>
                                 </div>
+
                                 <div class="forgot float-end">
-                                    <a href="#" id="forgot-link">Olvid&#233; mi clave</a>
+                                    <a href="#" id="forgot-link" onclick="cambiarDisplay(event)">Olvid&#233; mi clave</a>
                                 </div>
                             </div>
-                            <!--checkbox end--->
+                            <!--checkbox and linkend--->
                             <div class="clearfix"></div>
                             <!--submit--->
                             <div class="form-group d-grid mt-3">      
@@ -69,7 +70,7 @@
                         <p class="text-center fw-bolder text-light lead">
                             aqui va algun texto
                         </p>
-                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" id="register-link">Registrarse</button>
+                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" onclick="cambiarDisplay(event)" id="register-link">Registrarse</button>
                     </div>
                     <!-- tarjeta bienvenida final -->
                 </div>
@@ -78,14 +79,14 @@
         <!---------Login Final --------->
 
         <!-------Registro inicio ------->
-        <div class="row justify-content-center wrapper" id="register-box">
+        <div class="row justify-content-center wrapper hide-form" id="register-box">
             <div class="col-lg-10 my-auto myShadow">
                 <div class="row">
                     <div class="col-lg-5 d-flex flex-column justify-content-center myColor p-4">
                         <h1 class="text-center fw-bold text-white">Welcome Back!</h1>
                         <hr class="my-4 bg-light myHr"/>
                         <p class="text-center fw-bolder text-light lead">To keep connected with us please login with your personal info</p>
-                        <button class="btn btn-outline-light btn-lg fw-bolder mt-4 align-self-center myLinkBtn" id="login-link">Sign In</button>
+                        <button class="btn btn-outline-light btn-lg fw-bolder mt-4 align-self-center myLinkBtn" id="login-link" onclick="cambiarDisplay(event)">Sign In</button>
                     </div>
                     <div class="col-lg-7 bg-white p-4">
                         <h1 class="text-center fw-bold text-primary">Create Account</h1>
@@ -96,7 +97,7 @@
                                 <div class="input-group-prepend small-screen">
                                     <span class="input-group-text rounded-0">
                                         <!-- font size used to make icons bigger -->
-                                        <font size="5em"><i class="fa fa-envelope fa-lg " aria-hidden="true"></i></font>
+                                        <font size="5em"><i class="fa fa-user fa-lg " aria-hidden="true"></i></font>
                                     </span>
                                 </div>
                                 <input type="text" name="name" id="name" class="form-control rounded-0" placeholder="Full Name" required>
@@ -130,7 +131,7 @@
                                         <font size="5em"><i class="fa fa-key fa-lg" aria-hidden="true"></i> </font>
                                     </span>
                                 </div>
-                                <input type="password" name="cpassword" id="crpassword" class="form-control rounded-0" minlengh="5" placeholder="Reintroduce Clave" required/>
+                                <input type="password" name="cpassword" id="crpassword" class="form-control rounded-0" minlengh="5" placeholder="Reintroducir Clave" required/>
                             </div>
                             <!--Verfica password End--->
                             <!--mensaje password--->
@@ -150,11 +151,11 @@
         </div>
         <!---------Registro Final --------->
         <!---------forgot password inicio --------->
-        <div class="row justify-content-center wrapper" id="forgot-box">
+        <div class="row justify-content-center wrapper hide-form" id="forgot-box">
             <div class="col-lg-10 my-auto myShadow">
                 <div class="row">
                     <div class="col-lg-7 bg-white p-4">
-                        <h1 class="text-center fw-bold text-primary">Recuperacion de clave</h1>
+                        <h1 class="text-center fw-bold text-primary">Recuperaci&#243;n de clave</h1>
                         <hr class="my-3">
                         <p class="text-center fw-bolder text-primary lead">Para recuperar su clave, ingrese su usuario</p>
                         <form action="#" method="post" class="px-3" id="forgot-form">
@@ -179,9 +180,9 @@
                     </div>
                     <!-- Tarjeta Bienvenida --> 
                     <div class="col-lg-5 d-flex flex-column justify-content-center myColor p-4">
-                        <h1 class="text-center fw-bold text-white">Olvide mi clave!</h1>
+                        <h1 class="text-center fw-bold text-white">&#33;Olvid&#233; mi clave!</h1>
                         <hr class="my-3 bg-light myHr">
-                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" id="back-link">Regresar</button>
+                        <button class="btn btn-outline-light btn-lg align-self-center fw-bolder mt-4 myLinkBtn" onclick="cambiarDisplay(event)" id="back-link">Regresar</button>
                     </div>
                     <!-- tarjeta bienvenida final -->
                 </div><!-- fin row -->
@@ -191,7 +192,7 @@
     </div>
 
         <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script> -->
+        <script src="./scripts/script.js"></script>
 </body>
 </html>
