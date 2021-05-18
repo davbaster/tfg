@@ -25,26 +25,43 @@
                         <div class="mb-3">
                             <div class="row mb-3 gx-3">
                                 <div class="col">
-                                    <input type="text" name="fname" id="fname" class="form-control form-control-lg" placeholder="Ingrese Nombre" required>
+                                    <input type="text" name="fname" id="fname" class="form-control form-control-lg" placeholder="Nombre" required>
                                     <div class="invalid-feedback">Nombre es requerido!</div>
                                 </div>
+                            </div>
 
+                            <div class="row mb-3 gx-3">
                                 <div class="col">
-                                    <input type="text" name="apellido1" id="apellido1" class="form-control form-control-lg" placeholder="Ingrese Primer Apellido" required>
+                                    <input type="text" name="apellido1" id="apellido1" class="form-control form-control-lg" placeholder="Apellido 1" required>
                                     <div class="invalid-feedback">Primer apellido es requerido!</div>
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="E-mail" required>
-                            <div class="invalid-feedback">Email es obligatorio</div>
+
+                            <div class="row mb-3 gx-3">
+                                <div class="col">
+                                    <input type="text" name="apellido2" id="apellido2" class="form-control form-control-lg" placeholder="Apellido 2" required>
+                                    <div class="invalid-feedback">Segundo apellido es requerido!</div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div class="mb-3">
-                            <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Telefono required">
-                            <div class="invalid-feedback">Email es obligatorio</div>
+                            <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Telefono">
+                            <div class="invalid-feedback">Telefono es requerido</div>
                         </div>
+
+                        <div class="mb-3">
+                            <input type="text" name="cuentaBancaria" id="cuentaBancaria" class="form-control form-control-lg" placeholder="Cuenta bancaria">
+                            <div class="invalid-feedback">Cuenta es requerido</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" name="direccion" id="direccion" class="form-control form-control-lg" placeholder="Direccion">
+                            <div class="invalid-feedback">Ingrese una direccion</div>
+                        </div>
+
+
 
                         <div class="mb-3">
                             <input type="submit" value="Agregar Usuario" class="btn btn-primary btn-block btn-lg" id="add-user-btn">

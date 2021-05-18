@@ -20,7 +20,7 @@
             <div class="col-lg-10 my-auto">
                 <div class="card-group myShadow">
                     <div class="card rounded-left p-4" style="flex-grow:1.4;">
-                        <h1 class="text-center fw-bold text-primary">Ingresar al sistema</h1>
+                        <h1 class="text-center fw-bold myTitleColor">Ingresar al sistema</h1>
                         <hr class="my-3">
                         <form action="#" method="post" class="px-3" id="login-form">
                             <!--email-->
@@ -50,8 +50,8 @@
                                     <label for="customCheck" class="custom-control-label">Recordarme</label>
                                 </div>
 
-                                <div class="forgot float-end">
-                                    <a href="#" id="forgot-link" onclick="cambiarDisplay(event)">Olvid&#233; mi clave</a>
+                                <div class="forgot float-end ">
+                                    <a href="#" id="forgot-link" class="myLinkColor" onclick="cambiarDisplay(event)">Olvid&#233; mi clave</a>
                                 </div>
                             </div>
                             <!--checkbox and linkend--->
