@@ -5,10 +5,10 @@
     class Auth extends Database{
 
         // Registra un nuevo usuario
-        public function register($name, $email, $password){
-            $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
+        public function register($name, $email, $pass){
+            $sql = "INSERT INTO users (name, email, pass) VALUES (:name, :email, :pass)";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute(['name'=>$name, 'email'=>$email, 'paswword'=>$password]);
+            $stmt->execute(['name'=>$name, 'email'=>$email, 'pass'=>$pass]);
             return true;
         }
 
