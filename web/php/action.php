@@ -12,6 +12,7 @@
 
         $hpass = password_hash($pass, PASSWORD_DEFAULT);
 
+        
         if($user->user_exist($email)){
             echo $user->showMessage('warning', 'Este correo ya ha sido registrado!');
         }

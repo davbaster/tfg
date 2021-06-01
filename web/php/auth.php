@@ -21,6 +21,17 @@
 
             return $result;
         }
+
+        //loguea usuario existente
+        public function login($cedula){
+            $sql = "SELECT cedula, password FROM users WHERE cedula = :cedula AND deleted != 0";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['cedula'=>$cedula]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $row;
+
+        }
     } 
 
 
