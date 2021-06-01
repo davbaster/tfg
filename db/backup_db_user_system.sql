@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `cedula` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `apellido1` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `apellido2` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -37,8 +38,9 @@ CREATE TABLE `users` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `verified` tinyint(4) NOT NULL DEFAULT 0,
   `deleted` tinyint(4) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  PRIMARY KEY (`idUsuario`),
+  UNIQUE KEY `cedula` (`cedula`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,6 +49,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'12345678','david','c','c',12345678,'heredia','200-01-01-12345-7','test@gmail.com','12345','','2021-06-01 19:08:45','2021-06-01 19:08:45',0,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-30 23:27:36
+-- Dump completed on 2021-06-01 19:09:30

@@ -43,7 +43,7 @@ $(document).ready(function(){
                 url: './php/action.php',
                 method: 'post',
                 data: $("#login-form").serialize()+'&action=login',
-                sucess:function(response){
+                success:function(response){
                     console.log(response);
                     $("#login-btn").val('Ingresar');
                     if(response === 'login'){
