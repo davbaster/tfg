@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     require_once 'auth.php';
     $user = new Auth();
 
@@ -25,6 +25,12 @@
             }
         }
         
+    }
+
+
+    // request para login de usuario
+    if(isset($_POST['action']) && $_POST['action'] == 'login'   ){
+        print_r($_POST);
     }
 
 
