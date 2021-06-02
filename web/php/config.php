@@ -15,7 +15,7 @@ class Database {
         try{
             $this->conn = new PDO($this->dsn,$this->dbuser,$this->dbpass);
 
-            echo 'Conectado a la base de datos exitosamente.';
+            //echo 'Conectado a la base de datos exitosamente.';
 
         }catch(PDOException $e){
             echo 'Error : '.$e->getMessage(); 

@@ -53,7 +53,7 @@
                     setcookie("cedula","",1,'/');
                     setcookie("password","",1,'/');
                 }
-
+                //ECHO manda respuesta a action.js, y lo interpreta: login ajax request interpreter
                 echo 'login';
                 $_SESSION['user'] = $cedula;
 

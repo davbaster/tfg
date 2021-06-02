@@ -44,10 +44,10 @@ $(document).ready(function(){
                 method: 'post',
                 data: $("#login-form").serialize()+'&action=login',
                 success:function(response){
-                    console.log(response);
+                    console.log('Llega a success function '+response);
                     $("#login-btn").val('Ingresar');
                     if(response === 'login'){
-                        window.location = 'principal.html';
+                        window.location = './principal.html';
                     }
                     else{
                         $("#loginAlert").html(response);
