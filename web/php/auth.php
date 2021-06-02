@@ -13,10 +13,10 @@
         }
 
         // revisa si ya existe el usuario
-        public function user_exist($email){
-            $sql = "SELECT email FROM users WHERE email = :email";
+        public function user_exist($cedula){
+            $sql = "SELECT cedula FROM users WHERE cedula = :cedula";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute(['email'=>$email]);
+            $stmt->execute(['cedula'=>$cedula]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
             return $result;

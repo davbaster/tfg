@@ -7,19 +7,19 @@
     if(isset($_POST['action']) && $_POST['action'] == 'register' ){
         // print_r($_POST);
         $name = $user->test_input($_POST['name']);
-        $email = $user->test_input($_POST['email']); 
+        $cedula = $user->test_input($_POST['cedula']); 
         $pass = $user->test_input($_POST['password']); 
-
+        //convert password to password hash for security reasons
         $hpass = password_hash($pass, PASSWORD_DEFAULT);
 
         
-        if($user->user_exist($email)){
-            echo $user->showMessage('warning', 'Este correo ya ha sido registrado!');
+        if($user->user_exist($cedula)){
+            echo $user->showMessage('warning', 'Esta cedula ya ha sido registrada!');
         }
         else{
-            if($user->register($name,$email,$hpass)){
+            if($user->register($name,$cedula,$hpass)){
                 echo 'register';
-                $_SESSION['user'] = $email;
+                $_SESSION['user'] = $cedula;
             }
             else{
                 echo $user->showMessage('danger', 'Algo salio mal, intente de nuevo luego');
@@ -31,7 +31,42 @@
 
     // request para login de usuario
     if(isset($_POST['action']) && $_POST['action'] == 'login'   ){
-        print_r($_POST);
+        $cedula = $user->test_input($_POST['cedula']);
+        $pass = $user->test_input($_POST['password']);
+       
+        $loggedInUser = $user->login($cedula);
+
+        // si el usuario esta en la base de datos
+        if($loggedInUser != null){
+            //echo $loggedInUser['password'];
+            //si el password escrito (pass) coincide con el password en la base de datos
+            $passHash = password_hash($loggedInUser['password'], PASSWORD_DEFAULT);
+            //if( password_verify($pass, $loggedInUser['password']) ){
+            if( password_verify($pass, $passHash) ){ //borrar cuando se inserten los usuarios usando crear usuario
+                //si la casilla de recordarme esta marcada...
+                if(!empty($_POST['rem'])){
+                    setcookie("cedula", $cedula, time()+(30*24*60*60), '/');
+                    setcookie("password", $pass, time()+(30*24*60*60), '/');
+
+                }
+                else{
+                    setcookie("cedula","",1,'/');
+                    setcookie("password","",1,'/');
+                }
+
+                echo 'login';
+                $_SESSION['user'] = $cedula;
+
+            }
+            else{
+                echo $user->showMessage('danger', 'El password es incorrecto');
+            }
+
+        }
+        else{
+            //usuario no encontrado
+            echo $user->showMessage('danger', 'El usuario no se encuentra');
+        }
     }
 
 
