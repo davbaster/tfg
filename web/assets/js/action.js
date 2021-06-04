@@ -18,7 +18,7 @@ $(document).ready(function(){
                     sucess:function(response){
                         $("#register-btn").val('Sign Up');
                         if(response == 'register'){
-                            window.location = '/php/principal.php';
+                            window.location = './principal.php';
                         }
                         else{
                             $("#regAlert").html(response);
@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 
 
-    // login ajax request 
+    // login ajax request interpreter
     $("#login-btn").click(function(e){
         if($("#login-form")[0].checkValidity()){
             e.preventDefault();
@@ -47,7 +47,7 @@ $(document).ready(function(){
                     console.log('Llega a success function '+response);
                     $("#login-btn").val('Ingresar');
                     if(response === 'login'){
-                        window.location = './principal.html';
+                        window.location = './principal.php';
                     }
                     else{
                         $("#loginAlert").html(response);

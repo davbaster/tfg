@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body><div>
+
+    <?php
+        //Si usuario quiere devolverse, se redirigira a pagina principal 
+        session_start();
+        if(isset($_SESSION['user'])){
+            header('location:principal.php');
+        }
+    ?>
+    
+</div>
     <div class="container">
         <div class="row row-login" id="login-box">
             <div class="col-10 col-sm-6 col-md-4 offset-1 offset-sm-3 offset-md-4 my-auto">
@@ -20,10 +30,10 @@
                         <h3>Acceso al sistema</h3>
                         <form id="login-form" class="px-3" action="#" method="post">
                             <div id="loginAlert"></div>
-                            <div class="form-group mb-3"><label class="form-label">Usuario</label><input class="form-control rounded-0" type="text" id="cedula" name="cedula" placeholder="Cedula" required=""></div>
-                            <div class="form-group mb-3"><label class="form-label">Clave</label><input class="form-control rounded-0" type="password" id="password" name="password" placeholder="Clave" required=""></div>
+                            <div class="form-group mb-3"><label class="form-label">Usuario</label><input class="form-control rounded-0" type="text" id="cedula" name="cedula" placeholder="Cedula" required="" value="<?php if(isset( $_COOKIE['cedula'])) {echo $_COOKIE['cedula']; } ?>"></div>
+                            <div class="form-group mb-3"><label class="form-label">Clave</label><input class="form-control rounded-0" type="password" id="password" name="password" placeholder="Clave" required="" value="<?php if(isset( $_COOKIE['password'])) {echo $_COOKIE['password']; } ?>"></div>
                             <div class="form-group mb-3">
-                                <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label" for="formCheck-1">Recordarme</label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="customCheck" name="rem" php="<?php if(isset($_COOKIE['cedula'])) { ?> checked <?php } ?>"><label class="form-check-label" for="formCheck-1">Recordarme</label></div>
                             </div><input id="login-btn" type="submit" value="login" class="btn btn-primary btn-lg d-block w-100 login-btn"><a class="btn btn-link center-block" role="button" href="#">Recobrar accesso</a>
                         </form>
                     </div>

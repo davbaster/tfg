@@ -2,7 +2,8 @@
 
     session_start();
     unset($_SESSION['user']);
-    header('location:./index.html');
+    // redirect user to login page
+    header('location:../index.php');
 
 
 ?>

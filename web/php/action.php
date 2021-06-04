@@ -40,7 +40,7 @@
         if($loggedInUser != null){
             //echo $loggedInUser['password'];
             //si el password escrito (pass) coincide con el password en la base de datos
-            $passHash = password_hash($loggedInUser['password'], PASSWORD_DEFAULT);
+            $passHash = password_hash($loggedInUser['password'], PASSWORD_DEFAULT); //convierte el password a hash
             //if( password_verify($pass, $loggedInUser['password']) ){
             if( password_verify($pass, $passHash) ){ //borrar cuando se inserten los usuarios usando crear usuario
                 //si la casilla de recordarme esta marcada...
@@ -53,9 +53,12 @@
                     setcookie("cedula","",1,'/');
                     setcookie("password","",1,'/');
                 }
+                
+                $_SESSION['user'] = $cedula;
+
                 //ECHO manda respuesta a action.js, y lo interpreta: login ajax request interpreter
                 echo 'login';
-                $_SESSION['user'] = $cedula;
+                
 
             }
             else{

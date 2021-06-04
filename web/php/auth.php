@@ -32,6 +32,19 @@
             return $row;
 
         }
+
+        // current user in session
+        public function currentUser($cedula){
+            $sql = "SELECT * FROM users WHERE cedula = :cedula AND deleted != 0";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['cedula'=>$cedula]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $row;
+        }
+
+
+
     } 
 
 
