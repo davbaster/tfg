@@ -1,24 +1,24 @@
 $(document).ready(function(){
 
      // request para registro de usuario
-    $("#register-btn").click(function(e){
-        if($("#register-form")[0].checkValidity()){
+    $("#add-user-btn").click(function(e){
+        if($("#add-user-form")[0].checkValidity()){
             e.preventDefault();
-            $("#register-btn").val('Por favor espere..');
-            if(("#rpassword").val() != $("#cpassword").val() ){
+            $("#add-user-btn").val('Por favor espere..');
+            if($("#password").val() != $("#cpassword").val() ){
                 $("#passError").text('Password no coincide');
-                $("register-btn").val('Sign Up');
+                $("add-user-btn").val('Agregar');
             }
             else{
                 $("#passError").text('');
                 $.ajax({
-                    url: '/php/action.php',
+                    url: './php/action.php',
                     method: 'post',
-                    data: $("#register-form").serialize()+'&action=register',
+                    data: $("#add-user-form").serialize()+'&action=agregar',
                     sucess:function(response){
-                        $("#register-btn").val('Sign Up');
-                        if(response == 'register'){
-                            window.location = './principal.php';
+                        $("#add-user-btn").val('Agregar');
+                        if(response == 'agregar'){
+                            window.location = './usuarios.html';
                         }
                         else{
                             $("#regAlert").html(response);

@@ -4,7 +4,8 @@
     require_once 'auth.php';
     $user = new Auth();
 
-    if(isset($_POST['action']) && $_POST['action'] == 'register' ){
+    //agrega un usuario nuevo
+    if(isset($_POST['action']) && $_POST['action'] == 'agregar' ){
         // print_r($_POST);
         $name = $user->test_input($_POST['name']);
         $cedula = $user->test_input($_POST['cedula']); 

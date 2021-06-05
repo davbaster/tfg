@@ -34,15 +34,23 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="add-user-form" class="p-2" novalidate>
-                        <div class="mb-3">
+                    <form id="add-user-form" class="p-2">
+                        
+                                                    
                             <div class="row mb-3 gx-3">
+                                <div class="col">
+                                    <input type="text" name="cedula" id="cedula" class="form-control form-control-lg" placeholder="Cedula" required>
+                                    <div class="invalid-feedback">Cedula es requerido!</div>
+                                </div>
+                           </div>
+                                                                       
+                           <div class="row mb-3 gx-3">
                                 <div class="col">
                                     <input type="text" name="fname" id="fname" class="form-control form-control-lg" placeholder="Nombre" required>
                                     <div class="invalid-feedback">Nombre es requerido!</div>
                                 </div>
                             </div>
-
+                        
                             <div class="row mb-3 gx-3">
                                 <div class="col">
                                     <input type="text" name="apellido1" id="apellido1" class="form-control form-control-lg" placeholder="Apellido 1" required>
@@ -57,23 +65,38 @@
                                 </div>
                             </div>
 
-                        </div>
+                        
 
                         <div class="mb-3">
                             <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Telefono">
                             <div class="invalid-feedback">Telefono es requerido</div>
                         </div>
 
+                         <div class="mb-3">
+                            <input type="text" name="direccion" id="direccion" class="form-control form-control-lg" placeholder="Direccion">
+                            <div class="invalid-feedback">Ingrese una direccion</div>
+                        </div>
+                        
                         <div class="mb-3">
                             <input type="text" name="cuentaBancaria" id="cuentaBancaria" class="form-control form-control-lg" placeholder="Cuenta bancaria">
                             <div class="invalid-feedback">Cuenta es requerido</div>
                         </div>
 
                         <div class="mb-3">
-                            <input type="text" name="direccion" id="direccion" class="form-control form-control-lg" placeholder="Direccion">
-                            <div class="invalid-feedback">Ingrese una direccion</div>
+                            <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="email">
+                            <div class="invalid-feedback">Email es requerido</div>
                         </div>
-
+                        
+                        <div class="mb-3">
+                            <input type="text" name="password" id="password" class="form-control form-control-lg" placeholder="Password" required>
+                            <div class="invalid-feedback">Ingrese un password</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <input type="text" name="cpassword" id="cpassword" class="form-control form-control-lg" placeholder="Confirme Password" required>
+                            <div class="invalid-feedback">Confirmacion de password es requerido!</div>
+                        </div>
+                        <div id="passError" ></div>
 
 
                         <div class="mb-3">
@@ -95,7 +118,7 @@
                     <h4 class="text-primary">Todos los usuarios en la base de datos</h4>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewUserModal">Agregar usuario</button>
+                    <button id="btn-agregar-user" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewUserModal">Agregar usuario</button>
                 </div>
             </div>
         </div>
