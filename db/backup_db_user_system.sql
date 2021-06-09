@@ -28,12 +28,12 @@ CREATE TABLE `users` (
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `apellido1` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `apellido2` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `telefono` int(8) NOT NULL,
-  `direccion` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `cuentaBancaria` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `token` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `telefono` varchar(14) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `direccion` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cuentaBancaria` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `token_expire` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `verified` tinyint(4) NOT NULL DEFAULT 0,
@@ -49,7 +49,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'12345678','david','c','c',12345678,'heredia','200-01-01-12345-7','test@gmail.com','12345','','2021-06-01 19:08:45','2021-06-01 19:08:45',0,1);
+INSERT INTO `users` VALUES (1,'12345678','david','c','c','12345678','heredia','200-01-01-12345-7','test@gmail.com','12345','','2021-06-01 19:08:45','2021-06-01 19:08:45',0,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -62,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-02  3:52:42
+-- Dump completed on 2021-06-09  2:20:00

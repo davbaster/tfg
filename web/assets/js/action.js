@@ -15,10 +15,12 @@ $(document).ready(function(){
                     url: './php/action.php',
                     method: 'post',
                     data: $("#add-user-form").serialize()+'&action=agregar',
-                    sucess:function(response){
+                    success:function(response){
                         $("#add-user-btn").val('Agregar');
-                        if(response == 'agregar'){
-                            window.location = './usuarios.html';
+                        //si php responde agregar                         
+                        if(response == 'agregado'){
+                            window.location = './usuarios.php';
+                            
                         }
                         else{
                             $("#regAlert").html(response);

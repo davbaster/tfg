@@ -5,10 +5,10 @@
     class Auth extends Database{
 
         // Registra un nuevo usuario
-        public function register($name, $email, $pass){
-            $sql = "INSERT INTO users (name, email, pass) VALUES (:name, :email, :pass)";
+        public function register($cedula,$name,$apellido1, $apellido2,$telefono,$direccion,$cuenta,$email,$pass,$token){
+            $sql = "INSERT INTO users (cedula, nombre, apellido1, apellido2, telefono,direccion,cuentaBancaria,email,password,token) VALUES (:cedula,:name,:apellido1,:apellido2,:telefono,:direccion,:cuenta,:email,:pass,:token)";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute(['name'=>$name, 'email'=>$email, 'pass'=>$pass]);
+            $stmt->execute(['cedula'=>$cedula,'nombre'=>$name,'apellido1'=>$apellido1,'apellido2'=>$apellido2,'telefono'=>$telefono,'direccion'=>$direccion,'cuentaBancaria'=>$cuenta,'email'=>$email,'password'=>$pass,'token'=>$token]);
             return true;
         }
 

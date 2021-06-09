@@ -68,7 +68,7 @@
                         
 
                         <div class="mb-3">
-                            <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Telefono">
+                            <input type="tel" name="telefono" id="telefono" class="form-control form-control-lg" placeholder="Telefono">
                             <div class="invalid-feedback">Telefono es requerido</div>
                         </div>
 
@@ -118,7 +118,7 @@
                     <h4 class="text-primary">Todos los usuarios en la base de datos</h4>
                 </div>
                 <div>
-                    <button id="btn-agregar-user" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewUserModal">Agregar usuario</button>
+                    <button id="btn-agregar-user" type="button" class="btn btn-primary bg-purple" data-bs-toggle="modal" data-bs-target="#addNewUserModal">Agregar usuario</button>
                 </div>
             </div>
         </div>
@@ -129,12 +129,16 @@
                     <table class="table table table-striped table-bordered text-center">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Cedula</th>
+                                <th>Nombre</th>
+                                <th>Primer Apellido</th>
+                                <th>Segundo Apellido</th>
+                                <th>Telefono</th>
+                                <th>Direccion</th>
+                                <th>Cuenta Bancaria</th>
                                 <th>E-mail</th>
-                                <th>Phone</th>
-                                <th>Action</th>
+                                <th>Clave</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -142,7 +146,11 @@
                                 <td>1</td>
                                 <td>Sahil</td>
                                 <td>Kumar</td>
-                                <td>sahil@gmail.com</td>
+                                <td>Kumar 2</td>
+                                <td>1234567</td>
+                                <td>Heredia</td>
+                                <td>200-050</td>
+                                <td>sahil@gmail.com</td>                                        
                                 <td>1234567</td>
                                 <td>
                                     <a href="#" class="btn btn-success btn-sm rounded-pill">Editar</a>
