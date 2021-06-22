@@ -16,7 +16,7 @@
         $cuenta = $user->test_input($_POST['cuentaBancaria']);
         $email = $user->test_input($_POST['email']);  
         $pass = $user->test_input($_POST['password']); 
-        $token = "";
+        $token = "abcd";
         //convert password to password hash for security reasons
         $hpass = password_hash($pass, PASSWORD_DEFAULT);
 
@@ -26,7 +26,7 @@
         }
         else{
             //entre si puede registrar al usuario
-            if($user->register($cedula,$name,$apellido1,$apellido2,$telefono,$direccion,$cuenta,$email,$hpass,$token)){
+            if($user->addUser($cedula,$name,$apellido1,$apellido2,$telefono,$direccion,$cuenta,$email,$hpass,$token)){
                 
                 // Esta linea de abajo manda la palabra register para que la capte la pagina
                 // echo 'register';
@@ -53,7 +53,7 @@
         if($loggedInUser != null){
             //echo $loggedInUser['password'];
             //si el password escrito (pass) coincide con el password en la base de datos
-            $passHash = password_hash($loggedInUser['password'], PASSWORD_DEFAULT); //convierte el password a hash
+            $passHash = password_hash($loggedInUser['contrasena'], PASSWORD_DEFAULT); //convierte el password a hash
             //if( password_verify($pass, $loggedInUser['password']) ){
             if( password_verify($pass, $passHash) ){ //borrar cuando se inserten los usuarios usando crear usuario
                 //si la casilla de recordarme esta marcada...
