@@ -18,6 +18,15 @@
         if(isset($_SESSION['user'])){
             header('location:principal.php');
         }
+
+        // ini_set('display_errors', FALSE);
+        ini_set ('log_errors', TRUE); //guarde errores en un archivo.
+        ini_set("error_log", "/www/php-error.log");
+        error_log('Inicio de la aplicacion');
+
+        require_once 'libs/app.php';
+
+        $app = new App();
     ?>
     
 </div>

@@ -54,8 +54,8 @@
             //echo $loggedInUser['password'];
             //si el password escrito (pass) coincide con el password en la base de datos
             $passHash = password_hash($loggedInUser['contrasena'], PASSWORD_DEFAULT); //convierte el password a hash
-            //if( password_verify($pass, $loggedInUser['password']) ){
-            if( password_verify($pass, $passHash) ){ //borrar cuando se inserten los usuarios usando crear usuario
+            if( password_verify($pass, $loggedInUser['contrasena']) ){
+            // if( password_verify($pass, $passHash) ){ //borrar cuando se inserten los usuarios usando crear usuario
                 //si la casilla de recordarme esta marcada...
                 if(!empty($_POST['rem'])){
                     setcookie("cedula", $cedula, time()+(30*24*60*60), '/');
